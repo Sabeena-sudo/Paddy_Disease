@@ -18,7 +18,7 @@ class MainWindow(tk.Tk):
         self.img_width = 300
         self.class_names = ['brown_spot', 'normal', 'tungro']
 
-        self.imageplaceholder = r'C:\apikk\project\Paddy_Disease\uploadImage.png'
+        self.imageplaceholder = r'uploadImage.png'
         self.title("Daddy Disease Detection")
         self.geometry("700x400")
         self.resizable(False, False)
