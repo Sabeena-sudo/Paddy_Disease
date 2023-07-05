@@ -19,7 +19,7 @@ class MainWindow(tk.Tk):
         self.class_names = ['brown_spot', 'normal', 'tungro']
 
         self.imageplaceholder = r'uploadImage.png'
-        self.title("Daddy Disease Detection")
+        self.title("Paddy Disease Detection")
         self.geometry("700x400")
         self.resizable(False, False)
         self.columnconfigure(0)
@@ -27,7 +27,7 @@ class MainWindow(tk.Tk):
         self.rowconfigure(0)
         self.rowconfigure(1)
         self.rowconfigure(2, weight=1)
-        CTkLabel(self, text="DADDY DISEASE", font=CTkFont(size=35), text_color="black").grid(row=0, column=0,
+        CTkLabel(self, text="PADDY DISEASE", font=CTkFont(size=35), text_color="black").grid(row=0, column=0,
                                                                                              columnspan=2)
         CTkLabel(self, text="Detection System", text_color="black").grid(row=1, column=0, columnspan=2)
 
@@ -106,7 +106,7 @@ class MainWindow(tk.Tk):
         Output = (
             "Type of Disease {}"  # with a {:.2f} percent confidence."
             .format(self.class_names[np.argmax(score)], 100 * np.max(score)))
-        self.btnpaddystatus.configure(text=("Normal" if self.class_names[np.argmax(score)] == "normal" else "Disease"))
+        self.btnpaddystatus.configure(text=("Healthy" if self.class_names[np.argmax(score)] == "normal" else "Disease"))
         self.btntypedisease.configure(text=self.class_names[np.argmax(score)])
 
     def clear(self):
